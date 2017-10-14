@@ -4,3 +4,5 @@
 /vendor/
 /Application/Runtime/
 /composer.lock
+/node_modules/
+*.log
