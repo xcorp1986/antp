@@ -2,5 +2,5 @@
 /.buildpath
 *.phar
 /vendor/
-/app/Runtime/
+/Application/Runtime/
 /composer.lock
