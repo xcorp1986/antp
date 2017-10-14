@@ -1,6 +1,9 @@
 <?php
 
-namespace Common\Lib\Util;
+namespace Common\Util;
+
+use Think\Page;
+use Think\View;
 
 class Tool
 {
@@ -22,7 +25,7 @@ class Tool
      * @param string $name Action资源地址
      * @param string $layer 控制层名称
      * @param boolean $common 是否公共目录
-     * @return Action|false
+     * @return \Think\Controller|false
      */
     public static function getActionInstance($name, $layer = '', $common = false)
     {
@@ -33,7 +36,7 @@ class Tool
      * D函数用于实例化Model 格式 项目://分组/模块
      * @param string $name Model资源地址
      * @param string $layer 业务层名称
-     * @return Model
+     * @return \Think\Model
      */
     public static function getModelInstance($name = '', $layer = '')
     {
@@ -42,8 +45,9 @@ class Tool
 
     /**
      * 获取或设置配置参数
-     * @param unknown_type $name
-     * @param unknown_type $value
+     * @param mixed $name
+     * @param mixed $value
+     * @return mixed
      */
     public static function config($name = null, $value = null)
     {
@@ -140,8 +144,7 @@ class Tool
 
     public static function initPage($count = 0, $pageSize = 0, $param = null, $url = '')
     {
-        import('Org.Util.Page');
-        $page = new \Page((int)$count, (int)$pageSize, $param, $url);
+        $page = new Page((int)$count, (int)$pageSize, $param, $url);
 
         return $page;
     }
@@ -169,9 +172,12 @@ class Tool
         }
     }
 
+    /**
+     * @return View
+     */
     private static function initView()
     {
-        return \Think::instance('View');
+        return new View;
     }
 
     /**
@@ -210,7 +216,6 @@ class Tool
      * @access protected
      * @param mixed $name 要显示的模板变量
      * @param mixed $value 变量的值
-     * @return Action
      */
     public static function assign($name, $value = '')
     {

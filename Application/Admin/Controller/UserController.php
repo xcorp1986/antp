@@ -2,8 +2,8 @@
 
 namespace Admin\Controller;
 
-use Common\Lib\Util\DBUtil;
-use Common\Lib\Util\Tool;
+use Common\Util\DBUtil;
+use Common\Util\Tool;
 use Think\Controller\RestController;
 
 class UserController extends RestController

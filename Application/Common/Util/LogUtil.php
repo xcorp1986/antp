@@ -1,6 +1,6 @@
 <?php
 
-namespace Common\Lib\Util;
+namespace Common\Util;
 
 //日志管理类
 class LogUtil

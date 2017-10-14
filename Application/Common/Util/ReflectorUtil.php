@@ -1,5 +1,7 @@
 <?php
 
+namespace Common\Util;
+
 class ReflectorUtil
 {
 
