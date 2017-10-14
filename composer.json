@@ -1,0 +1,28 @@
+{
+  "name": "kwan/angular-thinkphp",
+  "description": "angular1 + thinkphp3.2.x example",
+  "minimum-stability": "dev",
+  "license": "Apache-2.0",
+  "authors": [
+    {
+      "name": "kwan",
+      "email": "303198069@qq.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.0.0",
+    "cheukpang/next-think": "dev-master"
+  },
+  "autoload": {
+    "psr-4": {
+      "Admin\\": "Application/Admin",
+      "Common\\": "Application/Common"
+    }
+  },
+  "repositories": {
+    "packagist": {
+      "type": "composer",
+      "url": "https://packagist.phpcomposer.com"
+    }
+  }
+}

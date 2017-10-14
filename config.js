@@ -1,5 +1,5 @@
 var globalConfig = {
-  "API": {
-    "URL": "/api/"
-  },
+    "API": {
+        "URL": "/api/"
+    },
 };
